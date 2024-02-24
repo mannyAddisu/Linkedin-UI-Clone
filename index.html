@@ -40,7 +40,7 @@
           <i id="notification" class="fa-solid fa-bell"></i>
           <a href="#">Notification</a>
         </li>
-        <li class="nav-img">
+        <li class="nav-img" onclick="settingsToggle()">
           <img
             class="profile-img"
             src="images/profilepic.png"
@@ -49,8 +49,34 @@
           <p>Me <i class="fa-solid fa-caret-down"></i></p>
         </li>
       </ul>
-      <div class="settings-menu"></div>
+      <div class="settings-menu">
+        <div class="settings">
+          <div class="profile">
+            <img src="images/profilepic.png" alt="profile" />
+            <div class="profile-details">
+              <p class="main">Amanuel Addisu</p>
+              <p class="sub">Front-end | UI/UX</p>
+            </div>
+          </div>
+          <button>View Profile</button>
+          <hr />
+          <div class="account-settings">
+            <p class="main">Account</p>
+            <p class="sub">Settings & Privacy</p>
+            <p class="sub">Help</p>
+            <p class="sub">Language</p>
+          </div>
+          <hr />
+          <div class="account-settings">
+            <p class="main">Manage</p>
+            <p class="sub">Posts & Activity</p>
+            <p class="sub">Job Posting Account</p>
+            <p class="sub">Sign Out</p>
+          </div>
+        </div>
+      </div>
     </nav>
     <div class="container"></div>
+    <script src="script.js"></script>
   </body>
 </html>
