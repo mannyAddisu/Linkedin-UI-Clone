@@ -22,6 +22,11 @@ window.addEventListener("click", function (e) {
 });
 
 select.addEventListener("click", function () {
+  // it could not function on single click when the page loads initially because
+  //the element ( or "option" in this case).style returns the inline style set -
+  //in the option class html not the style we set(compute) in the css file
+  // so I can set the display: none inline in the html file to fix the issue which I did for simplicity or use "window.getComputedStyle()"
+  //**if (window.getComputedStyle(option).getPropertyValue("display") === "none") **//
   if (option.style.display === "none") {
     option.style.display = "block";
   } else {
