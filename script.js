@@ -13,11 +13,17 @@ document.addEventListener("keydown", function (e) {
   ) {
     settingsMenu.classList.remove("settings-menu-height");
   }
+  if (e.key == "Escape" && option.style.display == "block") {
+    option.style.display = "none";
+  }
 });
 
 window.addEventListener("click", function (e) {
   if (!settingsMenu.contains(e.target) && !profile.contains(e.target)) {
     settingsMenu.classList.remove("settings-menu-height");
+  }
+  if (!select.contains(e.target) && !option.contains(e.target)) {
+    option.style.display = "none";
   }
 });
 
