@@ -3,7 +3,7 @@ const profile = document.querySelector(".nav-img");
 const select = document.querySelector(".select");
 const option = document.querySelector(".options");
 function settingsToggle() {
-  settingsMenu.classList.toggle("settings-menu-height");
+  settingsMenu.classList.toggle("hidden");
 }
 
 document.addEventListener("keydown", function (e) {
