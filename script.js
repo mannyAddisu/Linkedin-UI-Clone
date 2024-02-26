@@ -2,6 +2,9 @@ const settingsMenu = document.querySelector(".settings-menu");
 const profile = document.querySelector(".nav-img");
 const select = document.querySelector(".select");
 const option = document.querySelector(".options");
+const seeMore = document.querySelector(".see-more");
+const text = document.querySelector("#post-text");
+const feedSub = document.querySelector(".feed-sub");
 function settingsToggle() {
   settingsMenu.classList.toggle("hidden");
 }
@@ -47,5 +50,19 @@ option.addEventListener("click", function (e) {
   } else {
     document.getElementById("select-p").textContent =
       document.getElementById("op2").textContent;
+  }
+});
+
+seeMore.addEventListener("click", function () {
+  text.classList.toggle("text-cut");
+  if (
+    seeMore.textContent == "See less" &&
+    feedSub.style.flexDirection == "column"
+  ) {
+    seeMore.textContent = "See more";
+    feedSub.style.flexDirection = "row";
+  } else {
+    feedSub.style.flexDirection = "column";
+    seeMore.textContent = "See less";
   }
 });
