@@ -20,7 +20,7 @@ document.addEventListener("keydown", function (e) {
 
 window.addEventListener("click", function (e) {
   if (!settingsMenu.contains(e.target) && !profile.contains(e.target)) {
-    settingsMenu.classList.remove("settings-menu-height");
+    settingsMenu.classList.remove("hidden");
   }
   if (!select.contains(e.target) && !option.contains(e.target)) {
     option.style.display = "none";
