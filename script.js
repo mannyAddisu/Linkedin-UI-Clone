@@ -2,9 +2,8 @@ const settingsMenu = document.querySelector(".settings-menu");
 const profile = document.querySelector(".nav-img");
 const select = document.querySelector(".select");
 const option = document.querySelector(".options");
-const seeMore = document.querySelector(".see-more");
-const text = document.querySelector("#post-text");
-const feedSub = document.querySelector(".feed-sub");
+const seeMoreButtons = document.querySelectorAll(".see-more");
+
 function settingsToggle() {
   settingsMenu.classList.toggle("hidden");
 }
@@ -42,6 +41,7 @@ select.addEventListener("click", function () {
     option.style.display = "none";
   }
 });
+
 option.addEventListener("click", function (e) {
   option.style.display = "none";
   if (e.target == document.getElementById("op1")) {
@@ -53,16 +53,21 @@ option.addEventListener("click", function (e) {
   }
 });
 
-seeMore.addEventListener("click", function () {
-  text.classList.toggle("text-cut");
-  if (
-    seeMore.textContent == "See less" &&
-    feedSub.style.flexDirection == "column"
-  ) {
-    seeMore.textContent = "See more";
-    feedSub.style.flexDirection = "row";
-  } else {
-    feedSub.style.flexDirection = "column";
-    seeMore.textContent = "See less";
-  }
+seeMoreButtons.forEach(function (seeMore) {
+  seeMore.addEventListener("click", function () {
+    const feedSub = seeMore.closest(".feed-sub");
+    const text = feedSub.querySelector(".post-text");
+
+    text.classList.toggle("text-cut");
+    if (
+      seeMore.textContent == "See less" &&
+      feedSub.style.flexDirection == "column"
+    ) {
+      seeMore.textContent = "See more";
+      feedSub.style.flexDirection = "row";
+    } else {
+      feedSub.style.flexDirection = "column";
+      seeMore.textContent = "See less";
+    }
+  });
 });
