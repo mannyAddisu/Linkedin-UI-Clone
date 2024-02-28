@@ -3,6 +3,7 @@ const profile = document.querySelector(".nav-img");
 const select = document.querySelector(".select");
 const option = document.querySelector(".options");
 const seeMoreButtons = document.querySelectorAll(".see-more");
+const closeBtn = document.getElementById("messages-close");
 
 function settingsToggle() {
   settingsMenu.classList.toggle("hidden");
@@ -70,4 +71,12 @@ seeMoreButtons.forEach(function (seeMore) {
       seeMore.textContent = "See less";
     }
   });
+});
+
+closeBtn.addEventListener("click", function () {
+  if (document.querySelector(".messages-container").style.display == "none") {
+    document.querySelector(".messages-container").style.display = "block";
+  } else {
+    document.querySelector(".messages-container").style.display = "none";
+  }
 });
