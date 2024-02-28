@@ -115,8 +115,49 @@
             </div>
           </div>
         </div>
+        <div class="section">
+          <p class="main">Analytics</p>
+          <p class="sub"><i class="fa-solid fa-eye"></i>Private to you</p>
+          <div class="analytics">
+            <div class="analytics-main">
+              <i class="fa-solid fa-user-group main"></i>
+              <div class="analytics-details">
+                <p class="main">25 Profile views</p>
+                <p class="sub">Discover who's viewed your profile</p>
+              </div>
+            </div>
+            <div class="analytics-main">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <div class="analytics-details">
+                <p class="main">10 Search appreanances</p>
+                <p class="sub">See how often you appear in search results</p>
+              </div>
+            </div>
+          </div>
+          <p id="analytics-last-div">
+            Show all analytics <i class="fa-solid fa-arrow-right"></i>
+          </p>
+        </div>
       </main>
-      <aside class="profile-side"></aside>
+      <aside class="profile-side">
+        <div class="side-top">
+          <div class="languages">
+            <div class="language-details">
+              <p class="main">Profile Language</p>
+              <p class="sub">English</p>
+            </div>
+            <i class="fa-solid fa-pen main"></i>
+          </div>
+          <hr />
+          <div class="languages">
+            <div class="language-details">
+              <p class="main">Public profile & URL</p>
+              <p class="sub">www.linkedin.com/in/manny-addisu</p>
+            </div>
+            <i class="fa-solid fa-pen main"></i>
+          </div>
+        </div>
+      </aside>
     </section>
 
     <div class="chat-container">
@@ -128,7 +169,7 @@
         <div class="chat-header-right">
           <i class="fa-solid fa-ellipsis"></i>
           <i class="fa-solid fa-pen-to-square"></i>
-          <i id="messages-close" class="fa-solid fa-angle-down"></i>
+          <i class="fa-solid fa-angle-down" onclick="messagesToggle()"></i>
         </div>
       </div>
       <div class="messages-container" style="display: none">
